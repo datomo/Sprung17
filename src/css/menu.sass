@@ -1,0 +1,152 @@
+.menu-main
+	position: fixed
+	z-index: 99
+	left: 0
+	top: 0
+	width: 100vw
+	display: inline-block
+	background-color: black
+	font-weight: bold
+
+
+	box-shadow: $shadow-standard
+
+	.mobile-nav-toggle
+		display: none
+		float: right
+		width: 40px
+		height: 33px
+		margin: 20px
+		transform-origin: left
+		align-items: center
+		cursor: pointer
+
+		span
+			display: block
+			height: 3px
+			width: 100%
+			background: white
+			position: relative
+			transform-origin: left
+
+			transition: all 0.3s ease-in-out
+
+		span:nth-child(1)
+			top: 0px
+
+		span:nth-child(2)
+			top: 15px
+
+		span:nth-child(3)
+			top: 30px
+
+
+		&.is-open span:nth-child(1)
+			transform: rotate(45deg)
+			top: 4px
+			left: 5px
+
+		&.is-open span:nth-child(2)
+			width: 0%
+
+		&.is-open span:nth-child(3)
+			transform: rotate(-45deg)
+			top: 26px
+			left: 5px
+
+.mobile-nav
+	display: none
+	position: absolute
+	width: 100%
+	background: black
+	padding: 30px 0 20px
+	z-index: 11
+	transform: translateY(-100%)
+	transition: all 0.3 ease-in-out
+
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+	li
+		text-align: left
+		margin-bottom: 20px
+		width: 100vw
+		padding: 0 40px 0
+
+
+.menu-center
+	position: relative
+	left: 10vw
+	width: 80vw
+
+	li
+		line-height: 40px
+
+	@media (max-width: 1080px)
+		left: 0
+		width: 100vw
+
+
+	@media (max-width:860px)
+		ul
+			display: none
+
+		.mobile-nav-toggle
+			display: block
+
+		.nav-child
+			display: none
+
+
+@media (max-width:860px)
+	.mobile-nav.is-open
+		padding-top: 100px
+		display: block
+		transform: translateY(0%)
+		position: fixed
+
+.menu-wrapper
+	position: relative
+	text-align: right
+	float: right
+
+
+#homebutton
+	display:inline-block
+	position: relative
+	height: 40px
+	margin: 20px
+
+
+
+.menuPlaceholder
+	position: relative
+	height: 5vh
+	width: 100vw
+
+
+
+ul
+	list-style-type: none
+	display: inline-block
+	margin: 0
+	padding: 0
+	overflow: hidden
+	color: white
+
+
+li
+	float: left
+	padding: 20px 20px
+
+	&:hover
+
+	a
+		text-decoration: none
+		font-size: 20px
+		color: #e4e4e4
+		text-transform: uppercase
+
+		&:hover
+			color: #538fc3
